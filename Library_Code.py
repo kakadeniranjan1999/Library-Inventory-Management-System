@@ -5,7 +5,7 @@ import re
 from dateutil.relativedelta import relativedelta
 import smtplib
 myclient=pymongo.MongoClient("")
-my_data_base=myclient['MESA_Library']
+my_data_base=myclient['']
 
 def change_availibility_status(change_availibilty):
     b=0
@@ -48,7 +48,7 @@ Thank you for being a part of the library.
 This is a system generated mail.Kindly do not reply.
     
 Team MESA Library.'''
-    s.sendmail("mesalibrary19@gmail.com",email,message)
+    s.sendmail("YOUR_MAIL_ID",email,message)
     print('Mail sent to '+name)
     s.quit()
     print(end='\n')
@@ -79,7 +79,7 @@ Thank you for being a part of the library.
 This is a system generated mail.Kindly do not reply.
     
 Team MESA Library.'''
-    s.sendmail("mesalibrary19@gmail.com",email,message)
+    s.sendmail("YOUR_MAIL_ID",email,message)
     print('Mail sent to '+name)
     s.quit()
     print(end='\n')
@@ -205,7 +205,7 @@ This is a system generated mail.Kindly do not reply.
 Thank You.
     
 Team MESA Library.'''
-        s.sendmail("mesalibrary19@gmail.com",x['Issuer Email'],message)
+        s.sendmail("YOUR_MAIL_ID",x['Issuer Email'],message)
         print('Mail sent to '+str(x['Issuer Name']))
     s.quit()
     print(end='\n')
