@@ -179,7 +179,7 @@ def send_fine_mail():
     searched=database_object_new.find(query)
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
-    s.login("mesalibrary19@gmail.com", "Library@2019")
+    s.login("MAIL_ID", "PASSWORD")
     for x in searched:
         message ='''Subject: WARNING:MESA Library Fine \n
 Regards '''+x['Issuer Name']+''',
