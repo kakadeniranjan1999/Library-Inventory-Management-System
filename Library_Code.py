@@ -4,7 +4,7 @@ import datetime
 import re
 from dateutil.relativedelta import relativedelta
 import smtplib
-myclient=pymongo.MongoClient("mongodb://localhost:27017/")
+myclient=pymongo.MongoClient("")
 my_data_base=myclient['MESA_Library']
 
 def change_availibility_status(change_availibilty):
@@ -23,7 +23,7 @@ def change_availibility_status(change_availibilty):
 def send_issue_mail(email,name,book_name,author_name,date,deadline):
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
-    s.login("mesalibrary19@gmail.com", "Library@2019")
+    s.login("MAIL_ID", "PASSWORD")
     message ='''Subject: BOOK ISSUED:MESA Library \n
 Regards '''+name+''',
         
@@ -56,7 +56,7 @@ Team MESA Library.'''
 def send_donate_mail(email,name,book_name,author_name,date):
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
-    s.login("mesalibrary19@gmail.com", "Library@2019")
+    s.login("MAIL_ID", "PASSWORD")
     message ='''Subject: GRATITUDE:MESA Library Donation \n
 Regards '''+name+''',
         
